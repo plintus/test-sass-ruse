@@ -5,11 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <title>Cadent Front-end - Style Aptitude Test</title>
+    <script>
+      function toggleMenu() {
+        let el = document.querySelector('#sidebar');
+
+        if ( el.classList.contains('visible') ) {
+          el.classList.remove('visible');
+        }
+        else {
+          el.classList.add('visible');
+        }
+      }
+    </script>
   </head>
   <body>
     <div>
-      <span>Your clients are counting on you!</span>
+      <header>
+        <img src="images/logo.png" alt="SmartHome logo">
+      </header>
+      <aside>
+        <div id="sidebar">
+          <div id="sidebar_header" onClick="toggleMenu()">
+            <img src="images/house.jpg" alt="House at address">
+            <div id="location_name">
+              My Home 
+              <div id="menu_arrow" class="bi-caret-right-fill"></div>
+            </div>
+            <div id="address">9898 Trent Bypass Suite 541</div>
+          </div>
+          <nav aria-label="Main Navigation">
+            <div id="main_menu">
+              <ul>
+                <li>
+                  <div class="bi bi-house"></div>Overview
+                </li>
+                <li>
+                  <div class="bi bi-tv"></div>Devices
+                </li>
+                <li>
+                  <div class="bi bi-graph-up"></div>Analytics
+                </li>
+                <li>
+                  <div class="bi bi-list-ol"></div>Rules
+                </li>
+                <li>
+                  <div class="bi bi-images"></div>Gallery
+                </li>
+                <li>
+                  <div class="bi bi-clock-history"></div>History
+                </li>
+                <li>
+                  <div class="bi bi-wrench"></div>Settings
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </aside>
     </div>
   </body>
 </html>

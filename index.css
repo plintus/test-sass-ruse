@@ -1,7 +1,104 @@
-body,
-html {
+/* BASE STYLES */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
+body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  background-color: #20293a;
+  color: #79879b;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+}
+
+header {
+  padding: 10px 20px;
+  border-bottom: 2px solid #1d2535;
+}
+
+#sidebar {
+  width: 225px;
+  text-align: center;
+  padding-top: 25px;
+}
+#sidebar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#sidebar #sidebar_header {
+  cursor: pointer;
+}
+#sidebar #location_name {
+  font-size: 1.3em;
+  font-weight: 300;
+  position: relative;
+  margin-top: 15px;
+}
+#sidebar #location_name #menu_arrow {
+  display: inline-block;
+  position: absolute;
+  top: 1px;
+  right: 50px;
+  color: #1c83f9;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+}
+#sidebar.visible #location_name #menu_arrow {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+}
+#sidebar.visible #main_menu {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+#sidebar #address {
+  padding: 5px 0px;
+}
+#sidebar #main_menu {
+  font-size: 1.2em;
+  text-align: left;
+  padding-top: 20px;
+  position: fixed;
+  left: 0px;
+  top: 275px;
+  width: 210px;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  -webkit-transform: translateX(-300px);
+  -ms-transform: translateX(-300px);
+  transform: translateX(-300px);
+}
+#sidebar #main_menu div {
+  display: inline-block;
+}
+#sidebar #main_menu div:first-child {
+  margin-right: 20px;
+}
+#sidebar #main_menu div.bi {
+  font-size: 1.4em;
+}
+#sidebar #main_menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#sidebar #main_menu ul li {
+  padding: 15px 0px 15px 45px;
+  border-left: 7px solid transparent;
+}
+#sidebar #main_menu ul li:hover, #sidebar #main_menu ul li.selected {
+  background-color: #1d2535;
+  border-left-color: #1c83f9;
+  color: #1c83f9;
+  cursor: pointer;
 }

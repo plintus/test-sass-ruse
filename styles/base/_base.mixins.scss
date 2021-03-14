@@ -1,0 +1,15 @@
+@mixin rotateElement($deg) {
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+	transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+}
+
+@mixin slideMenu($distance) {
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  -webkit-transform: translateX($distance);
+  -ms-transform: translateX($distance);
+  transform: translateX($distance)
+}
